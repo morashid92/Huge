@@ -3,9 +3,7 @@
 
 2. Edit the application/config/config.development.php file to configure the applcation to run with your web server
 
-3. Create Users table. If you are using a stack with phpmyadmin, import the file users.sql which can be downladed from:
-
-https://drive.google.com/file/d/0BxX0dUsmMsrfNjgwaHF0REkyQkU/view?usp=sharing
+3. Create Users table. If you are using a stack with phpmyadmin, import the file users.sql which can be downladed from: https://drive.google.com/file/d/0BxX0dUsmMsrfNjgwaHF0REkyQkU/view?usp=sharing
 
 4. Work on your feature and push
 
