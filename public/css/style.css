@@ -30,6 +30,7 @@ body {
     padding: 20px;
     margin: 30px 0 30px 0;
 }
+
 .container a {
     color: #454545;
 }
@@ -42,6 +43,9 @@ body {
     padding: 4px 10px;
 }
 .container table tbody td {
+    padding: 4px 10px;
+}
+.search-container table tbody td {
     padding: 4px 10px;
 }
 .container .box {
@@ -266,3 +270,70 @@ body {
 .red-text {
     color: red;
 }
+
+.search-page-box h1 {
+    color: #252525;
+}
+.search-box input[type="search"], {
+    font-family: Arial, sans-serif;
+    color: #252525;
+    background-color: #ffffff;
+    padding: 5px 20px;
+    margin-bottom: 10px;
+    display: block;
+    width: 150%;
+    box-sizing: border-box; /* modern way to say width:100% without padding */
+    /*text-transform: uppercase;*/
+    float:right;
+}
+{
+    font-family: Arial, sans-serif;
+    color: #252525;
+    background-color: #ffffff;
+    padding: 5px 20px;
+    margin-bottom: 10px;
+    display: block;
+    width: 50%;
+    box-sizing: border-box; /* modern way to say width:100% without padding */
+    /*text-transform: uppercase;*/
+}
+
+.search-box input[type="submit"] {
+    color: #777;
+    background-color: transparent;
+    border: 2px solid #777;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    display: block;
+    width: 150%;
+    box-sizing: border-box; /* modern way to say width:100% without padding */
+    text-transform: uppercase;
+    float:right;
+}
+
+.search-box input[type="submit"]:hover {
+    color: #fff;
+    border-color: #252525;
+    background-color: #252525;
+}
+
+.search-box ::-webkit-input-placeholder { color: #777; opacity: 0.7; }
+.search-box ::-moz-placeholder { color: #777; opacity: 0.7; }
+.search-box :-ms-input-placeholder { color: #777; opacity: 0.7; }
+.search-box input:-moz-placeholder { color: #777; opacity: 0.7 }
+
+
+label, input[type=text] {
+    width: 150px;
+    float: left;
+}
+
+label + input[type=text] {
+    clear: left;
+}
+
+
+.field1 {
+   float:left;
+} 
+
