@@ -1,4 +1,4 @@
-<h1>SwiftRailz</h1>
+<h1>Rail Way</h1>
 <div class="container">
     <div class="login-page-box">
           
