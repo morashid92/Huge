@@ -3,8 +3,32 @@
     <!-- echo out the system feedback (error and success messages) -->
     <?php $this->renderFeedbackMessages(); ?>
 
+    <script type="text/javascript" src="/Huge/public/Javascript/postcode.class.js"></script>
+    <script>
+        var cp_access_token = "03450-36cb9-c1008-00878"; // ***** DON'T FORGET TO PUT YOUR ACCESS TOKEN HERE IN PLACE OF X's !!!! *****
+        var cp_obj_1 = CraftyPostcodeCreate();
+        cp_obj_1.set("access_token", cp_access_token); 
+        cp_obj_1.set("first_res_line", "----- please select your address ----"); 
+        cp_obj_1.set("res_autoselect", "0");
+        cp_obj_1.set("result_elem_id", "crafty_postcode_result_display_1");
+        cp_obj_1.set("form", "address");
+        cp_obj_1.set("elem_company"  , "companyname"); // optional
+        cp_obj_1.set("elem_street1"  , "address1");
+        cp_obj_1.set("elem_street2"  , "address2"); // optional, but highly recommended
+        cp_obj_1.set("elem_street3"  , "address3"); // optional
+        cp_obj_1.set("elem_town"     , "town");
+        cp_obj_1.set("elem_county"   , "county"); // optional
+        cp_obj_1.set("elem_postcode" , "postcode");
+        cp_obj_1.set("elem_house_num", "house_name"); // setting this results in the house name/number being separated onto its own line
+        cp_obj_1.set("elem_udprn"    , "udprn"); // optional
+        cp_obj_1.set("single_res_autoselect" , 1); // don't show a drop down box if only one matching address is found
+
+    </script>
+
     <!-- login box on left side -->
-    <div class="login-box" style="width: 50%; display: block;">
+     <div class="login-page-box">
+        <div class="table-wrapper">
+    <div class="login-box">
         <h2>Register a new account</h2>
 
         <!-- register form -->
@@ -25,13 +49,35 @@
 
             <input type="submit" value="Register" />
         </form>
+        
+
     </div>
+
+    <div class="postcode-box">
+                <h2>Billing Address</h2>
+                <div>
+
+    <form method="post" name="address">
+    
+               
+        <input type="text" name="postcode" style="width: 100px;" placeholder="Postcode"/>
+
+            <button type="button" onclick="cp_obj_1.doLookup()">Find Address</button>
+        <div id="crafty_postcode_result_display_1" ></div>
+
+        <input type="text" name="companyname" placeholder="Company Name"/> 
+        <input type="text" name="house_name" placeholder="House Name/No"/>
+        <input type="text" name="address1" placeholder="Address Line 1"/>   
+        <input type="text" name="address2" placeholder="Address Line 2"/> 
+        <input type="text" name="address3" placeholder="Address Line 3"/> 
+        <input type="text" name="town" placeholder="Town"/>        
+        <input type="text" name="county" placeholder="County"/>      
+        <input type="text" name="udprn" placeholder="UDPRN"/>
+    </form>
+    </div>
+            </div>
+
+
 </div>
-<div class="container">
-    <p style="display: block; font-size: 11px; color: #999;">
-        Please note: This captcha will be generated when the img tag requests the captcha-generation
-        (= a real image) from YOURURL/login/showcaptcha. As this is a client-side triggered request, a
-        $_SESSION["captcha"] dump will not show the captcha characters. The captcha generation
-        happens AFTER the request that generates THIS page has been finished.
-    </p>
+</div>
 </div>

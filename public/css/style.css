@@ -266,3 +266,45 @@ body {
 .red-text {
     color: red;
 }
+.postcode-box {
+    display: table-cell;
+    margin: 0;
+    color: #777;
+    background-color: #f4f3f1;
+    padding: 20px 50px 45px 50px;
+    width: 49%;
+    box-sizing: border-box;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.postcode-box h2 {
+    color: #252525;
+}
+.postcode-box input[type="text"],
+.postcode-box input[type="password"] {
+    font-family: Arial, sans-serif;
+    color: #252525;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box; /* modern way to say width:100% without padding */
+    /*text-transform: uppercase;*/
+}
+.postcode-box input[type="submit"] {
+    color: #777;
+    background-color: transparent;
+    border: 2px solid #777;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box; /* modern way to say width:100% without padding */
+    text-transform: uppercase;
+}
+.postcode-box input[type="submit"]:hover {
+    color: #fff;
+    border-color: #252525;
+    background-color: #252525;
+}
