@@ -11,7 +11,7 @@
  * It's a little bit dirty to put this here, but who cares. For development purposes it's totally okay.
  */
 error_reporting(E_ALL);
-ini_set("display_errors", 1);
+ini_set("display_errors", 1);  
 
 /**
  * Configuration for cookie security
@@ -131,11 +131,11 @@ return array(
 	 * EMAIL_SMTP_AUTH: leave this true unless your SMTP service does not need authentication
 	 */
 	'EMAIL_USED_MAILER' => 'phpmailer',
-	'EMAIL_USE_SMTP' => false,
-	'EMAIL_SMTP_HOST' => 'yourhost',
+	'EMAIL_USE_SMTP' => true,
+	'EMAIL_SMTP_HOST' => 'mail.smtp2go.com',
 	'EMAIL_SMTP_AUTH' => true,
-	'EMAIL_SMTP_USERNAME' => 'yourusername',
-	'EMAIL_SMTP_PASSWORD' => 'yourpassword',
+	'EMAIL_SMTP_USERNAME' => 'rashid_92@hotmail.co.uk',
+	'EMAIL_SMTP_PASSWORD' => 'swiftrail',
 	'EMAIL_SMTP_PORT' => 465,
 	'EMAIL_SMTP_ENCRYPTION' => 'ssl',
 	/**
@@ -143,12 +143,39 @@ return array(
 	 */
 	'EMAIL_PASSWORD_RESET_URL' => 'login/verifypasswordreset',
 	'EMAIL_PASSWORD_RESET_FROM_EMAIL' => 'no-reply@example.com',
-	'EMAIL_PASSWORD_RESET_FROM_NAME' => 'My Project',
-	'EMAIL_PASSWORD_RESET_SUBJECT' => 'Password reset for PROJECT XY',
+	'EMAIL_PASSWORD_RESET_FROM_NAME' => 'Swift Rail',
+	'EMAIL_PASSWORD_RESET_SUBJECT' => 'Password reset for Swift Rail',
 	'EMAIL_PASSWORD_RESET_CONTENT' => 'Please click on this link to reset your password: ',
 	'EMAIL_VERIFICATION_URL' => 'login/verify',
 	'EMAIL_VERIFICATION_FROM_EMAIL' => 'no-reply@example.com',
-	'EMAIL_VERIFICATION_FROM_NAME' => 'My Project',
-	'EMAIL_VERIFICATION_SUBJECT' => 'Account activation for PROJECT XY',
+	'EMAIL_VERIFICATION_FROM_NAME' => 'Swift Rail',
+	'EMAIL_VERIFICATION_SUBJECT' => 'Account activation for Swift Rail',
 	'EMAIL_VERIFICATION_CONTENT' => 'Please click on this link to activate your account: ',
 );
+
+
+
+if(isset($_SERVER['SERVER_SOFTWARE']) && strpos($_SERVER['SERVER_SOFTWARE'],'Google App Engine') !== false) {
+  $mysql_array = array(
+        'driver'    => 'mysql',
+        'unix_socket' => getenv('PRODUCTION_CLOUD_SQL_INSTANCE'),
+        'host'      => '',
+        'database'  => getenv('PRODUCTION_DB_NAME'),
+        'username'  => getenv('PRODUCTION_DB_USERNAME'),
+        'password'  => getenv('PRODUCTION_DB_PASSWORD'),
+        'charset'   => 'utf8',
+        'collation' => 'utf8_unicode_ci',
+        'prefix'    => '',
+    );
+} else {
+  $mysql_array = array(
+        'driver'    => 'mysql',
+        'host'      => getenv('localhost'),
+        'database'  => getenv('huge'),
+        'username'  => getenv('root'),
+        'password'  => getenv(''),
+        'charset'   => 'utf8',
+        'collation' => 'utf8_unicode_ci',
+        'prefix'    => '',
+    );
+}
