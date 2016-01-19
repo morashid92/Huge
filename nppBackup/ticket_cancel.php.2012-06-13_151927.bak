@@ -1,0 +1,90 @@
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Ticket cancel page</title>
+<style type="text/css">
+	
+	table {
+			background-color:#F8F8FF;
+			padding-left:15px;
+			padding-right:15px;
+			padding-top:15px;
+			padding-bottom:15px;
+			width:60%;
+			border: 0px red solid;
+			font-family:Verdana, Geneva, sans-serif;
+			cellpadding:5px;
+			cellspacing:5px;
+	}
+	td {
+		border-bottom: 1px green dotted;
+		height:30px;
+	}
+	span {
+		color:red;
+		font-size:8pt;
+	}
+	td.hr {
+		border-bottom: 1px blue solid;
+		font-size:15pt;
+		color:blue;
+		font-weight:bold;
+	}
+	td.nb {
+		border-bottom:0px green dotted;
+	}
+	td.last_hr {
+		border-bottom:1px blue solid;
+		border-bottom-left-radius:2em;
+		border-bottom-right-radius:2em;
+	}
+</style>
+
+<script type="text/javascript">
+function validateForm()
+{
+var a=document.forms["rem"]["pnr"].value
+
+if (a==null || a=="")
+  {
+  alert("Please enter name of the train");
+  return false;
+  }
+}
+</script>
+
+
+</head>
+<body>
+<form name="rem" action="" onsubmit="return validateForm();" method="post">
+<table align="center">
+	<tr>
+		<td class="hr" colspan="2">Ticket cancel</td>
+	</tr>
+
+
+	<tr>
+		<td>Enter the requested pnr no</td><td><input type="text" name="pnr" size="10" maxlength="10"></td>
+	</tr>
+    
+	<tr>
+		<td class="nb" colspan="2"><br /></td>
+	</tr>
+	<tr>
+		<td class="nb" colspan="2"><br /></td>
+	</tr>
+	<tr>
+
+		<td colspan="2" class="last_hr" align="center"><input type="submit" name="submit" value="cancel">&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="reset" name="clear" value="Reset"></td>
+
+	</tr>
+</table>
+</form>
+</body>
+</html>

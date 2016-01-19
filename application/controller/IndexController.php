@@ -18,4 +18,31 @@ class IndexController extends Controller
     {
         $this->View->render('index/index');
     }
+
+    public function s_result()
+    {
+        $this->View->render('index/s_result');
+    }
+
+    public function search_t()
+    {
+        $this->View->render('index/search_t');
+    }
+
+    public function passenger()
+    {
+        $this->View->render('index/passenger');
+    }
+
+   public function testing()
+    {
+      $this->View->render('index/testing');
+    }
+
+    public function booking()
+    {
+      $this->View->render('index/booking');
+    }
+
+
 }

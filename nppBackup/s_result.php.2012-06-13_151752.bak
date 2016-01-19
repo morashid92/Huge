@@ -1,0 +1,292 @@
+<?php
+session_start();
+if($_SESSION['username'])
+	{
+		//login_page
+		}
+else{
+	header("location:error.php");
+	}
+
+?>
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html> 
+<head> 
+   <title>results</title>
+   <style type = "text/css">
+		body{
+				background:url(images/back2.jpg);
+		}
+		a{
+			color:black;
+			text-decoration:none;
+		}
+		a:hover{
+			color:rgba(255,255,255,0.8);
+			
+			}
+		table{
+			border-radius:10px;
+			padding-top:10px;
+			padding-bottom:10px;
+			background:rgba(255,250,205,0.3);
+		}
+		th{
+			background:white;
+			text-align:center;
+			padding-left:10px;
+			padding-right:10px;
+			
+		}
+		td{
+			text-align:center;
+			background:blue;
+			padding-left:10px;
+			padding-right:10px;
+		}
+		#php{
+				position:absolute;
+				top:30px;
+				left:230px;
+				padding:50px;
+				border-radius:50px;
+				background:rgba(255,255,2,0.3);
+				box-shadow:0 0 15px 10px white;
+		}
+		
+		#two{
+				position:relative;
+				top:37px;
+				left:33px;
+				width:180px;
+				background:rgba(234,78,21,0.9);
+				padding:5px;
+				border-radius:60px;
+				text-align:center;
+				
+			}
+		.button{
+				position:relative;
+				top:25px;
+				left:30px;
+				width:150px;
+				background:rgba(234,78,21,0.9);
+				padding:5px;
+				border-radius:60px;
+				text-align:center;
+		}
+		td.button1{
+			text-align:left;
+		}
+		td.adj{
+			text-align:left;
+		}
+		
+		
+   </style>
+   
+   
+   
+</head> 
+<body style='font-family:arial;font-size:13pt;'> 
+<div id="php">
+
+<strong>YOUR SEARCH RESULT:</strong>
+
+
+
+<?php
+	
+
+if(isset($_POST['source'], $_POST['destination'], $_POST['month'], $_POST['day']))
+{
+
+	
+	$source = htmlentities($_POST['source']);
+	$dest = htmlentities($_POST['destination']);
+	$day = htmlentities($_POST['day']);
+	$month = htmlentities($_POST['month']);
+	
+	if(empty($source) || empty($dest) || empty($month) || empty($day)){
+    header("location:search_t.php");
+	}
+	else{
+	
+	
+	//database connection
+	$dbcon=mysql_connect('localhost', 'root', 'root') or die(mysql_error());
+	
+	
+	
+	
+	//selceting database
+	mysql_select_db("reg_db") or die(mysql_error());
+	
+	
+	$query = "SELECT * FROM train WHERE source = '$source' AND destination='$dest' AND day='$day' AND month='$month'";
+	
+	$result = mysql_query($query) or die(mysql_error());
+	$num_rows =mysql_num_rows($result);
+	
+	echo "<i><font size='3pt' color='red'>$num_rows results found..</font></i>";
+	
+	$hel = substr(number_format(time() * mt_rand(),0,'',''),0,10); //unique 10 digit number....
+	
+	echo "<form action='testing.php' method='POST'>";
+	
+	echo "<table>";
+    echo "<tr><th>select</th><th>Train no</th> <th>Train Name</th> <th>Departs</th> <th>Arrives</th> <th>Gen</th> <th>AC1</th> <th>AC2</th> <th>FC</th> <th>SLP</th></tr>";
+	
+	while($row = mysql_fetch_object($result)) 
+	{ 
+	echo "<tr><td>";
+	echo "<input type='radio' name='train_no' value = '".$row->train_no."'>";
+	echo "</td><td>";
+	echo $row->train_no;
+	echo "</td><td>";
+	echo $row->train_name;
+	echo "</td><td>";
+	echo $row->departs;
+	echo "</td><td>";
+	echo $row->arrives;
+	echo "</td><td>";
+	echo $row->GEN;
+	echo "</td><td>";
+	echo $row->AC1;
+	echo "</td><td>";
+	echo $row->AC2;
+	echo "</td><td>";
+	echo $row->FC;
+	echo "</td><td>";
+	echo $row->SLP;
+	echo "</td></tr>";
+	}
+	echo "<tr><td colspan='2'>";
+	echo "select your class";
+	echo "</td><td colspan='8' class='adj'>";
+	echo "<select name='class'>";
+	echo "<option>GEN</option>";
+	echo "<option>AC1</option>";
+	echo "<option>AC2</option>";
+	echo "<option>FC</option>";
+	echo "<option>SLP</option>";
+	echo "</select>";
+	echo "</td></tr>";
+	echo "</table>";
+	
+	
+	echo "<input type='hidden' name='no' value= '$hel' >";
+	
+	echo "<input type='submit' name='submit' value='go'>";
+	
+	echo "</form>";
+ }//end of the main if..
+}
+?> 
+<!--<hr>
+<div>
+<form name="" action="ticket1.php" method="post">
+<strong>COMPLETE THE FORM TO BOOK A TICKET:</strong>
+<table>
+<!--<tr><td>Your Name</td><td><input type="text" name="p_name" /></td></tr>
+<tr><td>Gender</td><td><select name="gender">
+		<option>Male</option>
+		<option>Female</option>
+		</select>
+		</td></tr>
+<tr>
+		<td>Date</td>
+		<td>
+		<input type="hidden" name="time" value="true" />
+		
+		<select name="year">
+			<option value="" selected="selected">Year</option>
+			<option value="2011">2011</option>
+		</select>&nbsp;&nbsp;&nbsp;
+			
+		<select name="month">
+			<option value="0">Month</option>
+			<option value="jan">Jan</option>
+			<option value="feb">Feb</option>
+			<option value="mar">Mar</option>
+			<option value="apr">Apr</option>
+			<option value="may">May</option>
+			<option value="jun">Jun</option>
+			<option value="jul">Jul</option>
+			<option value="aug">Aug</option>
+			<option value="sep">Sep</option>
+			<option value="oct">Oct</option>
+			<option value="nov">Nov</option>
+			<option value="dec">Dec</option>
+		</select>&nbsp;&nbsp;&nbsp;
+
+		
+
+		<select name="day">
+			<option value="0">DAY</option>
+			<option value="01">01</option>
+			<option value="02">02</option>
+			<option value="03">03</option>
+			<option value="04">04</option>
+			<option value="05">05</option>
+			<option value="06">06</option>
+			<option value="07">07</option>
+			<option value="08">08</option>
+			<option value="09">09</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+			<option value="26">26</option>
+			<option value="27">27</option>
+			<option value="28">28</option>
+			<option value="29">29</option>
+			<option value="30">30</option>
+			<option value="31">31</option>
+		</select>
+		</td>
+	</tr>		
+<tr><td>Enter The Train Name</td><td><input type="text" name="train_name" /></td></tr>
+<tr><td>Enter The Train No</td><td><input type="text" name="train_no" /></td></tr>
+<tr><td>Class</td><td><select name="class">
+		<option value="GEN">GEN</option>
+		<option value="AC1">AC1</option>
+		<option value="AC2">AC2</option>
+		<option value="SLP">SLP</option>
+		<option value="FC">FC</option>
+		</select>
+		</td></tr>
+</table>
+		<input type="submit" class="button" name="submit" value="Go to next page" />
+</form>
+
+<div id="two">
+	<a href="search_t.php">Make Another Search</a>
+</div>
+
+
+</div>	
+-->
+</div>
+
+
+
+
+</body> 
+</html>

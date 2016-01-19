@@ -41,6 +41,14 @@
                 <li <?php if (View::checkForActiveControllerAndAction($filename, "login/register")) { echo ' class="active" '; } ?> >
                     <a href="<?php echo Config::get('URL'); ?>login/register">Register</a>
                 </li>
+
+                <li <?php if (View::checkForActiveControllerAndAction($filename, "admin/index")) { echo ' class="active" '; } ?> >
+                    <a href="<?php echo Config::get('URL'); ?>admin/index">Admin</a>
+                </li>
+                
+   
+
+
             <?php } ?>
         </ul>
 
@@ -70,6 +78,9 @@
                     </li>
                 </ul>
             </li>
+
+
+
             <?php if (Session::get("user_account_type") == 7) : ?>
                 <li <?php if (View::checkForActiveController($filename, "admin")) {
                     echo ' class="active" ';
