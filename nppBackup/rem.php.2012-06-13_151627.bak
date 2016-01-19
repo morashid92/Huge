@@ -1,0 +1,19 @@
+<?php
+//connecting to the database
+$con = mysql_connect("localhost","root","");
+if (!$con){
+  die('Could not connect: ' . mysql_error());
+  }
+
+mysql_query($sql,$con);
+mysql_select_db("reg_db", $con);
+
+$sql="DELETE FROM train WHERE train_name = '$_POST[trainname]'";
+
+if(!mysql_query($sql,$con)){
+	die("error:" .mysql_error());
+}
+header('Location:thankadmin.php');
+
+mysql_close($con);
+?>

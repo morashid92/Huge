@@ -1,0 +1,146 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Admin Login page</title>
+	
+	<style type="text/css">
+		body {
+			background-color:#2781BA;
+			background-image:url('images/bg1.gif');
+			
+		}
+		
+	table {
+				border: 0px red solid;
+				background-color:white;
+				padding-top:0px;
+				margin-top:0px;
+				cellspacing:0px; 
+				cellpadding:0px;
+	}
+	td {
+		border:0px green dotted;
+	}
+	table.login_tab {
+		background-color:#F8F8FF;
+		cellspacing:0px; 
+		cellpadding:0px;
+	}
+	
+	table.main_tab {
+		background-color:#F8F8FF;
+		width:70%;
+	}
+	
+	td.login {
+			background-color:#C0C0C0;
+	}
+	td.login_table {
+			background-color:#F8F8FF;
+			padding-top:50px;
+			padding-left:20px;
+			padding-bottom:20px;
+	}
+	td.login_nam {
+		height:30px;
+		font-size:13pt;
+		color:white;
+		background-color:#3b5998;
+	}
+	td.new {
+		height:30px;
+		font-weight:none;
+		font-size:11pt;
+	}
+	
+	a {
+		color:#999933;
+	}
+	a:hover {
+	
+		font-size:12pt;
+	}
+	
+	td.footer {
+		background-color:#2952A3;
+		background-image:url('images/tdback1.gif');
+		border-top: 1px grey solid;
+		color:#999933;
+		text-align:center;
+		font-size:8pt;
+		padding-bottom:5px;
+		padding-top:5px;
+	}
+	
+	p.link {
+		font-size:12pt;
+		text-decoration:underline;
+		padding-left:10px;
+		}
+	ul {
+		font-size:10pt;
+		text-decoration:none;
+		color:#999933;
+		list-style-image: url('images/link.png');
+	}
+	#links {
+			border-left:1px #999933 solid;
+			padding-left:5px;
+			position:absolute;
+			top:240px;
+			left:970px
+			
+	}
+	
+	
+	
+	
+	</style>
+</head>
+
+<body>
+	<table align='center' class='main_tab' cellspacing= "0" cellpadding= "0">
+	<tr>
+		<td colspan="2"><img src="images/rail.jpg"  /></td>
+	</tr>
+	
+	<tr>
+	 <td class='login_table' align='left'>
+		<form action='adminlogin.php' method='post'>		
+		<table class="login_tab">
+			<tr>
+				<td colspan="2" class='login_nam' valign='middle'>Administrator Login</td>
+			</tr>
+			<tr>
+				<td class='login'>Username:</td>
+				<td class='login'><input type='text' name='username'> </td>
+			</tr>
+			<tr>
+				<td class='login'>Password:</td>
+				<td class='login'><input type='password' name='password'> </td>
+			</tr>
+			<tr>
+				<td class='login' colspan='2'><input type='submit' value='Login'></td>
+			</tr>
+			
+			
+			
+	  </table>
+	  </form>
+	</td>
+	</tr>
+	<tr>
+		<td class="footer">School Of Technology, NEHU<br />Copyright &copy; Railway Reservation System</td>
+	</tr>
+	</table>
+	<div id="links">
+		<p class="link">Links</p>
+	<ul>
+		<li><a href="index.php">Home</a></li>
+		
+		<li><a href="index.php">Normal Login</a></li>
+	</ul>
+</div>	
+</body>

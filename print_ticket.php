@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html> 
+<head> 
+   <title>results</title>
+   <style type = "text/css">
+		body{
+				background:url(images/back2.jpg);
+		}
+		a{
+			color:black;
+			text-decoration:none;
+		}
+		a:hover{
+			color:rgba(255,255,255,0.8);
+			
+			}
+		table{
+			border-radius:10px;
+			padding-top:10px;
+			padding-bottom:10px;
+			background:rgba(255,250,205,0.3);
+		}
+		th{
+			background:white;
+			text-align:center;
+			padding-left:10px;
+			padding-right:10px;
+			
+		}
+		td{
+			text-align:center;
+			background:blue;
+			padding-left:10px;
+			padding-right:10px;
+		}
+		#php{
+				position:absolute;
+				top:30px;
+				left:230px;
+				padding:50px;
+				border-radius:50px;
+				background:rgba(255,255,2,0.3);
+				box-shadow:0 0 15px 10px white;
+		}
+		
+		#two{
+				position:relative;
+				top:37px;
+				left:33px;
+				width:180px;
+				background:rgba(234,78,21,0.9);
+				padding:5px;
+				border-radius:60px;
+				text-align:center;
+				
+			}
+		.button{
+				position:relative;
+				top:25px;
+				left:30px;
+				width:150px;
+				background:rgba(234,78,21,0.9);
+				padding:5px;
+				border-radius:60px;
+				text-align:center;
+		}
+		
+		
+   </style>
+   
+   
+   
+</head> 
+<body style='font-family:arial;font-size:13pt;'> 
+<div id="php">
+
+<strong>YOUR BOOKING DETAILS:</strong>
+
+
+
+<?php
+	
+
+if(isset($_POST['p_name'], $_POST['gender'], $_POST['train_name'], $_POST['train_no'], $_POST['class'], $_POST['year'], $_POST['day'], $_POST['month']))
+{
+
+	
+	$p_name = htmlentities($_POST['p_name']);
+	$gender = htmlentities($_POST['gender']);
+	$train_name = htmlentities($_POST['train_name']);
+	$train_no = htmlentities($_POST['train_no']);
+	$class = htmlentities($_POST['class']);
+	$year = htmlentities($_POST['year']);
+	$month = htmlentities($_POST['month']);
+	$day = htmlentities($_POST['day']);
+	
+	
+	if(empty($p_name) || empty($gender) || empty($month) || empty($day) || empty($year) || empty($train_name) || empty($train_no) || empty($class) ){
+    die('fields empty');
+	}
+	else{
+	
+	
+	//database connection
+	include_once("includes/connection.php");
+	
+	
+	$query = "SELECT * FROM passenger WHERE p_name = '$p_name' AND gender='$gender' AND train_name='$train_name' AND train_no='$train_no' AND class='$class'";
+	
+	$result = mysql_query($query) or die(mysql_error());
+	$num_rows =mysql_num_rows($result);
+	
+	echo "<i><font size='3pt' color='red'>$num_rows results found..</font></i>";
+	echo "<table>";
+    echo "<tr><th>p_name</th> <th>gender</th> <th>train_name</th> <th>train_no</th> <th>class</th> <th>day</th> <th>month</th> <th>year</th></tr>";
+	
+	while($row = mysql_fetch_array($result)) 
+	{ 
+	echo "<tr><td>";
+	echo $row['p_name'];
+	echo "</td><td>";
+	echo $row['gender'];
+	echo "</td><td>";
+	echo $row['train_name'];
+	echo "</td><td>";
+	echo $row['train_no'];
+	echo "</td><td>";
+	echo $row['class'];
+	echo "</td><td>";
+	echo $row['day'];
+	echo "</td><td>";
+	echo $row['month'];
+	echo "</td><td>";
+	echo $row['year'];
+	echo "</td></tr>";
+	}
+	echo "</table>";
+ }//end of the main if..
+}
+?> 
+<hr>
+
+<div id="two">
+	<a href="search_t.php">Make Another Search</a>
+</div>
+
+</div>
+
+
+
+
+</body> 
+</html>

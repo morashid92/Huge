@@ -1,0 +1,50 @@
+<?php
+
+
+session_start();
+
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+if ($username&&$password)
+{
+
+	$connect = mysql_connect("localhost", "root", "root") or
+	die ("could not connect!:" .mysql_error());
+	mysql_select_db("reg_db") or die("could not find db:" .mysql_error());
+	
+	$query = mysql_query("SELECT * FROM admin WHERE name='$username'");
+	
+	$numrows = mysql_num_rows($query);
+	
+	if ($numrows!=0)
+	{
+			
+			while($row = mysql_fetch_assoc($query))
+			{
+				$dbusername = $row['name'];
+				$dbpassword = $row['password'];
+			}
+			
+		//matching
+		if($username == $dbusername&&$password == $dbpassword)
+		{
+			header("location:admin_page.php");
+			
+			$_SESSION['username'] = $username;
+		}
+		else
+			echo"
+			<b><i>
+			Your password is incorrect!!
+			</i></b>
+			";
+			
+	}else
+		die("<b>that user does not exist</b>") ;
+	
+	
+	}
+else
+     die("<b>please enter your username and password!</b>");
+?>

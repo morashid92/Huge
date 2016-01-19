@@ -1,0 +1,97 @@
+<?php
+session_start();
+if($_SESSION['username'])
+	{
+		//login_page
+		}
+else{
+	header("location:error.php");
+	}
+
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+</head>
+
+<body>
+<?php
+	
+
+if(isset($_POST['name'], $_POST['name1'], $_POST['name2'], $_POST['name3'], $_POST['name4']))
+{
+
+	$p_name = htmlentities($_POST['name']);
+	$age = htmlentities($_POST['age']);
+	$gender = htmlentities($_POST['sex']);
+	$berth = htmlentities($_POST['berth']);
+	
+	$p_name1 = htmlentities($_POST['name1']);
+	$age1 = htmlentities($_POST['age1']);
+	$gender1 = htmlentities($_POST['sex1']);
+	$berth1 = htmlentities($_POST['berth1']);
+	
+	$p_name2 = htmlentities($_POST['name2']);
+	$age2 = htmlentities($_POST['age2']);
+	$gender2 = htmlentities($_POST['sex2']);
+	$berth2 = htmlentities($_POST['berth2']);
+	
+	$p_name3 = htmlentities($_POST['name3']);
+	$age3 = htmlentities($_POST['age3']);
+	$gender3 = htmlentities($_POST['sex3']);
+	$berth3 = htmlentities($_POST['berth3']);
+	
+	$p_name4 = htmlentities($_POST['name4']);
+	$age4 = htmlentities($_POST['age4']);
+	$gender4 = htmlentities($_POST['sex4']);
+	$berth4 = htmlentities($_POST['berth4']);
+	
+	$test = $_POST['train_no']; //experimenting somethings
+
+	
+	
+	if(empty($p_name) || empty($age) || empty($gender) || empty($berth)){
+    header("location:alert.php");
+	}
+	else{
+	
+	
+	//database connection
+	$dbcon=mysql_connect('localhost', 'root', 'root');
+	if(!$dbcon){
+		die("opps! theres some problem in the database connection" .mysql_error());
+	}
+	else{
+		//selceting database
+		$mydb = mysql_select_db("reg_db", $dbcon);
+		
+		if(!$mydb){
+				die("database not found!" .mysql_error());			
+		}else{
+			$sql="INSERT INTO passenger(ID, p_name, p_name1, p_name2, p_name3, p_name4, gender, gender1, gender2, gender3, gender4, age, age1, age2, age3, age4, 
+			berth, berth1, berth2, berth3, berth4) 
+		values ('', '$p_name', '$p_name1', '$p_name2', '$p_name3','$p_name4','$gender','$gender1',
+		   '$gender2', '$gender3', '$gender4', '$age', '$age1', '$age2', '$age3', '$age4'
+		   ,'$berth', '$berth1', '$berth2', '$berth3', '$berth4')";
+			
+		if(!mysql_query($sql,$dbcon)){
+		die("error:" .mysql_error());
+		}else{
+			$test=$_POST['train_no'];
+			header("location:booking.php");
+		}
+		mysql_close($dbcon);
+		}	
+	}
+		
+  }
+}
+?>
+
+
+
+</body>
+</html>

@@ -1,35 +1,72 @@
-<?php
+   <?php
 
-class AdminController extends Controller
+   class AdminController extends Controller
 {
-    /**
-     * Construct this object by extending the basic Controller class
-     */
-    public function __construct()
-    {
-        parent::__construct();
 
-        // special authentication check for the entire controller: Note the check-ADMIN-authentication!
-        // All methods inside this controller are only accessible for admins (= users that have role type 7)
-        Auth::checkAdminAuthentication();
+   public function index()
+    {
+      $this->View->render('admin/index');
+    }
+    
+    public function adminlogin()
+    {
+      $this->View->render('admin/adminlogin');
     }
 
-    /**
-     * This method controls what happens when you move to /admin or /admin/index in your app.
-     */
-    public function index()
+    public function admin_page()
     {
-	    $this->View->render('admin/index', array(
-			    'users' => UserModel::getPublicProfilesOfAllUsers())
-	    );
+    	$this->View->render('admin/admin_page');
     }
 
-	public function actionAccountSettings()
-	{
-		AdminModel::setAccountSuspensionAndDeletionStatus(
-			Request::post('suspension'), Request::post('softDelete'), Request::post('user_id')
-		);
+    public function add_train()
+    {
+      $this->View->render('admin/add_train');
+    }
 
-		Redirect::to("admin");
-	}
+    public function rem_train()
+    {
+      $this->View->render('admin/rem_train');
+    }
+
+    public function full_p()
+    {
+      $this->View->render('admin/full_p');
+    }
+
+    public function logout1()
+    {
+      $this->View->render('admin/logout1');
+    }
+
+    public function add()
+    {
+      $this->View->render('admin/add');
+    }
+    
+    public function rem()
+    {
+      $this->View->render('admin/rem');
+    }
+
+    public function thankadmin()
+    {
+      $this->View->render('admin/thankadmin');
+    }
+
+    public function p_result()
+    {
+      $this->View->render('admin/p_result');
+    }
+
+    public function presult()
+    {
+      $this->View->render('admin/presult');
+    }
+
+    public function search_p()
+    {
+      $this->View->render('admin/search_p');
+    }
+
+ 
 }
