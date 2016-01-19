@@ -10,4 +10,4 @@ https://drive.google.com/file/d/0BxX0dUsmMsrfVnFlNVViSVQ3bFU/view?usp=sharing
 
 4. Create a new fearure branch: git checkout -b "name of your branch"
 
-5. , do your work and push. Then send a PR. 
+5. do your work and push changes to master. Then send a PR. 
