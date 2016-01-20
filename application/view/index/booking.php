@@ -1,6 +1,6 @@
 <?php
 include_once('includes/connection.php');
-
+error_reporting(E_ALL ^ E_DEPRECATED);
 if($_SESSION['user_name'])
 	{
 		//login_page
@@ -117,7 +117,7 @@ else{
 				echo "</td></tr>";
 				
 				echo "</table>";
-				error_reporting(E_ALL ^ E_DEPRECATED);
+
 				$dbcon =mysql_connect('localhost', 'root');
 				mysql_close($dbcon);
 	?>

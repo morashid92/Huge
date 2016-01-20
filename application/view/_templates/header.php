@@ -28,7 +28,7 @@
             </li>
             <?php if (Session::userIsLoggedIn()) { ?>
                 <li <?php if (View::checkForActiveController($filename, "route")) { echo ' class="active" '; } ?> >
-                    <a href="<?php echo Config::get('URL'); ?>route/index">Routes</a>
+                    <a href="<?php echo Config::get('URL'); ?>map.php">Routes</a>
                 </li>
                 <li <?php if (View::checkForActiveController($filename, "note")) { echo ' class="active" '; } ?> >
                     <a href="<?php echo Config::get('URL'); ?>note/index">My Notes</a>
