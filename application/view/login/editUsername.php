@@ -1,5 +1,20 @@
+<!DOCTYPE html>
 <div class="container">
-    <h1>LoginController/editUsername</h1>
+        <div class="login-page-box">
+        <div class="table-wrapper">
+                <div class="login-box">
+
+
+<html>
+<head>
+
+    
+   
+    
+</head>
+<body>
+
+    <h1>Update Details</h1>
 
     <!-- echo out the system feedback (error and success messages) -->
     <?php $this->renderFeedbackMessages(); ?>
@@ -17,4 +32,8 @@
             <input type="submit" value="Submit" />
         </form>
     </div>
+</div>
+</div>
+</div>
+</div>
 </div>

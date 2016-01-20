@@ -1,5 +1,20 @@
+<!DOCTYPE html>
 <div class="container">
-    <h1>LoginController/showProfile</h1>
+        <div class="login-page-box">
+        <div class="table-wrapper">
+                <div class="login-box">
+
+
+<html>
+<head>
+
+    
+   
+    
+</head>
+<body>
+
+    <h1>your Details</h1>
 
     <div class="box">
         <h2>Your profile</h2>
@@ -18,4 +33,8 @@
         </div>
         <div>Your account type is: <?= $this->user_account_type; ?></div>
     </div>
+</div>
+</div>
+</div>
+</div>
 </div>

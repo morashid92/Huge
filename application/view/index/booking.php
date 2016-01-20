@@ -20,13 +20,13 @@ else{
 		}
 	#passenger{
 		position:absolute;
-		top:10px;
+		top:100px;
 		left:18%;
 		background:rgba(240,240,240,0.9);
 		font-family:Georgia, "Times New Roman", Times, serif;
 		width:700px;
 		font-size:16px;
-		color:#00F;
+		color:#008080;
 		border-radius:20px;
 		padding:10px;
 	}
@@ -41,7 +41,7 @@ else{
 		size:18pt;
 	}
 	td{
-		color:#00F;
+		color:#008080;
 		text-align:center;
 		border:0px solid #CF0;
 		padding-left:20px;
@@ -51,7 +51,7 @@ else{
 		background:rgba(245,245,245,1);
 	}
 	#head{
-		background:#06F;
+		background:#008080;
 		border-radius:5px;
 		padding:5px;
 		color:white;
@@ -121,7 +121,31 @@ else{
 				$dbcon =mysql_connect('localhost', 'root');
 				mysql_close($dbcon);
 	?>
-    Make your payment
+
+<form class="paypal" action="payments.php" method="post" id="paypal_form" target="_blank">
+
+        <input type="hidden" name="cmd" value="_xclick" />
+
+        <input type="hidden" name="no_note" value="1" />
+
+        <input type="hidden" name="lc" value="UK" />
+
+        <input type="hidden" name="currency_code" value="GBP" />
+
+        <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_LG.gif:NonHostedGuest" />
+
+        <input type="hidden" name="first_name" value="Customer's First Name" />
+
+        <input type="hidden" name="last_name" value="Customer's Last Name" />
+
+        <input type="hidden" name="payer_email" value="customer@example.com" />
+
+        <input type="hidden" name="item_number" value="123456" / >
+
+        <input type="submit" name="submit" value="Submit Payment"/>
+
+    </form>
+
     </div>
 </body>
 </html>

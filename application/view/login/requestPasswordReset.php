@@ -1,4 +1,18 @@
+<!DOCTYPE html>
 <div class="container">
+        <div class="login-page-box">
+        <div class="table-wrapper">
+                <div class="login-box">
+
+
+<html>
+<head>
+
+    
+   
+    
+</head>
+<body>
     <h1>Request a password reset</h1>
     <div class="box">
 
@@ -13,6 +27,9 @@
             </label>
             <input type="submit" value="Send me a password-reset mail" />
         </form>
+    </div>
+    </div>
+</div>
 
     </div>
 </div>

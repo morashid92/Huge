@@ -1,3 +1,4 @@
+
 <?php
 error_reporting(E_ALL ^ E_DEPRECATED);
 if($_SESSION['user_name'])
@@ -10,79 +11,31 @@ else{
 
 ?>
 <!DOCTYPE html>
+<div class="container">
+        <div class="login-page-box">
+        <div class="table-wrapper">
+                <div class="login-box">
+
+
 <html>
 <head>
     <title>search for train</title>
     
-    <style type="text/css">
-            
-    
-        body{
-                background:rgba(240,240,240,0.9);
-                font-family:Arial, Helvetica, sans-serif;
-                margin:auto;
-                color:#E06C31;
-                background:url(images/test2.jpg);
-                background-repeat:repeat;
-            }
-        h2{
-            background:rgba(0,0,238,0.9);
-            font-family:Georgia, "Times New Roman", Times, serif;
-            width:392px;
-            text-align:center;
-            color:#FF0;
-        }
-        a{
-            text-decoration:none;
-        }
-        a:hover{
-            color:rgba(255,255,255,0.5);
-        }
-        
-        table{
-                padding-left:30px;
-        }
-    
-        td{
-        
-            border:0px yellow solid;
-            text-align:right;
-            font-weight:bold;
-        }
-        td.class{
-            text-align:left;
-        }
-        
-        #main{
-            border:0px red solid;
-            border-radius:5px;
-            border-top-right-radius:90px;
-            border-bottom-left-radius:90px;
-            
-            background:rgba(240,255,240,0.6);
-            box-shadow:15px 15px 15px grey;
-            position:absolute;
-            padding-left:35px;
-            padding-bottom:15px;
-            top:50px; left:100px;
-            width:600px;
-        }
-        #back {
-                background:rgba(255,69,0,0.5);
-                width:80px;
-                border-radius:10px;
-                text-align:center;
-                position:relative;
-                left:500px;
-                padding-top:5px;
-                padding-bottom:5px;
-                
-        }
-    
-    </style>
+   
     
 </head>
 <body>
+       <style type = "text/css">
+        body{
+                background:url(Huge/_pictures/546898.jpg);
+                
+                background-repeat:no-repeat;
+                
+                
+        }
+        
+  
+</style>
 <div id="main">
 <form name="#" action="<?php echo Config::get('URL'); ?>index/s_result" method="post">
     <h2>PLAN YOUR JOURNERY</h2>
@@ -170,5 +123,14 @@ else{
 </form>
 <div id="back"><a href="login.php">GoBack</a></div>
 
+
+
 </div>
+
+
 </body>
+</div>
+</div>
+</div>
+</div>
+

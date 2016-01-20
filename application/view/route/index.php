@@ -1,8 +1,15 @@
 <!DOCTYPE html>
+<div class="container">
+        <div class="login-page-box">
+        <div class="table-wrapper">
+                <div class="login-box">
 <html>
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
+<<<<<<< HEAD
+    <title>Directions service</title>
+=======
     <title>Directions service (complex)</title>
     <style>
       html, body {
@@ -31,10 +38,10 @@
   line-height: 30px;
   padding-left: 10px;
 }
+>>>>>>> upstream/master
 
-    </style>
-  </head>
   <body>
+    <h2>View Routes</h2>
     <div id="floating-panel">
     <b>Start: </b>
     <select id="start">
@@ -55,8 +62,15 @@
     </select>
     </div>
     <div id="map"></div>
+<<<<<<< HEAD
+              </div>
+        </div>
+    </div>
+  </div>
+=======
     &nbsp;
     <div id="warnings-panel"></div>
+>>>>>>> upstream/master
     <script>
 function initMap() {
   var markerArray = [];

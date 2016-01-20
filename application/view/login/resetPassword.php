@@ -1,4 +1,19 @@
+<!DOCTYPE html>
 <div class="container">
+        <div class="login-page-box">
+        <div class="table-wrapper">
+                <div class="login-box">
+
+
+<html>
+<head>
+
+    
+   
+    
+</head>
+<body>
+
     <h1>LoginController/resetPassword</h1>
 
     <!-- echo out the system feedback (error and success messages) -->
@@ -24,4 +39,8 @@
 
         <a href="<?php echo Config::get('URL'); ?>login/index">Back to Login Page</a>
     </div>
+</div>
+</div>
+</div>
+</div>
 </div>

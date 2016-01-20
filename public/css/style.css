@@ -30,6 +30,7 @@ body {
     padding: 20px;
     margin: 30px 0 30px 0;
 }
+
 .container a {
     color: #454545;
 }
@@ -42,6 +43,9 @@ body {
     padding: 4px 10px;
 }
 .container table tbody td {
+    padding: 4px 10px;
+}
+.search-container table tbody td {
     padding: 4px 10px;
 }
 .container .box {
@@ -100,9 +104,9 @@ body {
     display: block;
     text-decoration: none;
     padding: 10px 15px;
-    border: 2px solid #454545;
-    background: #454545;
-    color: #fff;
+    border: 2px solid #008080;
+    background: #008080;
+    color: #F0F8FF;
     float:none;
     font-size: 10px;
     text-transform: uppercase;
@@ -120,12 +124,12 @@ body {
 .navigation li a:hover,
 .navigation li:hover li a:hover {
     background: #fff;
-    color: #454545;
+    color: #008080;
 }
 
 .navigation > li.active a {
     background: #fff;
-    color: #454545;
+    color: #008080;
 }
 .navigation > li.active li a {
     background: #454545;
@@ -181,7 +185,7 @@ body {
     text-transform: uppercase;
 }
 .login-box h2 {
-    color: #252525;
+    color: #008080;
 }
 .login-box input[type="text"],
 .login-box input[type="password"] {
@@ -196,9 +200,9 @@ body {
     /*text-transform: uppercase;*/
 }
 .login-box input[type="submit"] {
-    color: #777;
+    color: #008080;
     background-color: transparent;
-    border: 2px solid #777;
+    border: 2px solid #008080;
     padding: 15px 20px;
     margin-bottom: 10px;
     display: block;
@@ -208,8 +212,8 @@ body {
 }
 .login-box input[type="submit"]:hover {
     color: #fff;
-    border-color: #252525;
-    background-color: #252525;
+    border-color: #008080;
+    background-color: #008080;
 }
 .login-box .remember-me-label {
     display: block;
@@ -258,11 +262,119 @@ body {
     color: #fff;
 }
 .register-box a:hover {
-    background-color: #ffffff;
-    color: #252525;
+    background-color: #008080;
+    color: #008080;
 }
 
 /* error page */
 .red-text {
     color: red;
+}
+
+
+.search-page-box h1 {
+    color: #252525;
+}
+.search-box input[type="search"], {
+    font-family: Arial, sans-serif;
+    color: #252525;
+    background-color: #ffffff;
+    padding: 5px 20px;
+    margin-bottom: 10px;
+    display: block;
+    width: 150%;
+    box-sizing: border-box; /* modern way to say width:100% without padding */
+    /*text-transform: uppercase;*/
+    float:right;
+}
+{
+    font-family: Arial, sans-serif;
+    color: #252525;
+    background-color: #ffffff;
+    padding: 5px 20px;
+    margin-bottom: 10px;
+    display: block;
+    width: 50%;
+    box-sizing: border-box; /* modern way to say width:100% without padding */
+    /*text-transform: uppercase;*/
+}
+
+.search-box input[type="submit"] {
+
+.postcode-box {
+    display: table-cell;
+    margin: 0;
+    color: #777;
+    background-color: #008080;
+    padding: 20px 50px 45px 50px;
+    width: 49%;
+    box-sizing: border-box;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.postcode-box h2 {
+    color: #252525;
+}
+.postcode-box input[type="text"],
+.postcode-box input[type="password"] {
+    font-family: Arial, sans-serif;
+    color: #252525;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box; /* modern way to say width:100% without padding */
+    /*text-transform: uppercase;*/
+}
+.postcode-box input[type="submit"] {
+
+    color: #777;
+    background-color: transparent;
+    border: 2px solid #777;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    display: block;
+
+    width: 150%;
+    box-sizing: border-box; /* modern way to say width:100% without padding */
+    text-transform: uppercase;
+    float:right;
+}
+
+.search-box input[type="submit"]:hover {
+    color: #fff;
+    border-color: #252525;
+    background-color: #252525;
+}
+
+.search-box ::-webkit-input-placeholder { color: #777; opacity: 0.7; }
+.search-box ::-moz-placeholder { color: #777; opacity: 0.7; }
+.search-box :-ms-input-placeholder { color: #777; opacity: 0.7; }
+.search-box input:-moz-placeholder { color: #777; opacity: 0.7 }
+
+
+label, input[type=text] {
+    width: 150px;
+    float: left;
+}
+
+label + input[type=text] {
+    clear: left;
+}
+
+
+.field1 {
+   float:left;
+} 
+
+
+    width: 100%;
+    box-sizing: border-box; /* modern way to say width:100% without padding */
+    text-transform: uppercase;
+}
+.postcode-box input[type="submit"]:hover {
+    color: #fff;
+    border-color: #252525;
+    background-color: #252525;
 }

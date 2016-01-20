@@ -1,14 +1,26 @@
+<!DOCTYPE html>
 <div class="container">
-    <h1>ProfileController/index</h1>
+        <div class="login-page-box">
+        <div class="table-wrapper">
+                <div class="login-box">
+
+
+<html>
+<head>
+    
+   
+    
+</head>
+<body>
+    <h2>Profiles</h2>
     <div class="box">
 
         <!-- echo out the system feedback (error and success messages) -->
         <?php $this->renderFeedbackMessages(); ?>
 
-        <h3>What happens here ?</h3>
+
         <div>
-            This controller/action/view shows a list of all users in the system. You could use the underlying code to
-            build things that use profile information of one or multiple/all users.
+            
         </div>
         <div>
             <table class="overview-table">
@@ -41,4 +53,7 @@
             </table>
         </div>
     </div>
+</div>
+</div>
+</div>
 </div>

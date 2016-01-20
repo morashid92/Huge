@@ -1,3 +1,10 @@
+<div class="container">
+
+	    <div class="login-page-box">
+        <div class="table-wrapper">
+
+            <div class="login-box">
+                <h2>Login here</h2>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +14,7 @@
 </head>
 
 <body>
+	<form>
 	<table align='center' class='main_tab' cellspacing= "0" cellpadding= "0">
 
 	
@@ -37,3 +45,8 @@
 
 </div>	
 </body>
+            </div>
+
+        </div>
+    </div>
+</div>

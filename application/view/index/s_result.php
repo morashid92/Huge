@@ -11,84 +11,21 @@ else{
 
 ?>
 <!DOCTYPE html>
-<html> 
-<head> 
-   <title>results</title>
-   <style type = "text/css">
-		body{
-				background:url(images/back2.jpg);
-		}
-		a{
-			color:black;
-			text-decoration:none;
-		}
-		a:hover{
-			color:rgba(255,255,255,0.8);
-			
-			}
-		table{
-			border-radius:10px;
-			padding-top:10px;
-			padding-bottom:10px;
-			background:rgba(255,250,205,0.3);
-		}
-		th{
-			background:white;
-			text-align:center;
-			padding-left:10px;
-			padding-right:10px;
-			
-		}
-		td{
-			text-align:center;
-			background:blue;
-			padding-left:10px;
-			padding-right:10px;
-		}
-		#php{
-				position:absolute;
-				top:30px;
-				left:230px;
-				padding:50px;
-				border-radius:50px;
-				background:rgba(255,255,2,0.3);
-				box-shadow:0 0 15px 10px white;
-		}
-		
-		#two{
-				position:relative;
-				top:37px;
-				left:33px;
-				width:180px;
-				background:rgba(234,78,21,0.9);
-				padding:5px;
-				border-radius:60px;
-				text-align:center;
-				
-			}
-		.button{
-				position:relative;
-				top:25px;
-				left:30px;
-				width:150px;
-				background:rgba(234,78,21,0.9);
-				padding:5px;
-				border-radius:60px;
-				text-align:center;
-		}
-		td.button1{
-			text-align:left;
-		}
-		td.adj{
-			text-align:left;
-		}
-		
-		
-   </style>
+<div class="container">
+        <div class="login-page-box">
+        <div class="table-wrapper">
+                <div class="login-box">
+
+
+<html>
+<head>
+
+    
    
-   
-   
-</head> 
+    
+</head>
+<body>
+
 <body style='font-family:arial;font-size:13pt;'> 
 <div id="php">
 
@@ -180,3 +117,7 @@ if(isset($_POST['source'], $_POST['destination'], $_POST['month'], $_POST['day']
 
 </body> 
 </html>
+</div>
+</div>
+</div>
+</div>
