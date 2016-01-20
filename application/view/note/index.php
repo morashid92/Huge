@@ -1,13 +1,24 @@
+<!DOCTYPE html>
 <div class="container">
-    <h1>NoteController/index</h1>
-    <div class="box">
+        <div class="login-page-box">
+        <div class="table-wrapper">
+                <div class="login-box">
 
+
+<html>
+<head>
+
+    
+   
+    
+</head>
+<body>
         <!-- echo out the system feedback (error and success messages) -->
         <?php $this->renderFeedbackMessages(); ?>
 
-        <h3>What happens here ?</h3>
+        <h3>Notes</h3>
         <p>
-            This is just a simple CRUD implementation. Creating, reading, updating and deleting things.
+            Save your favorite journeys and trains here! We at Swift Rails know that travel is important you. With the hectic timetables, update notes of what you need to take here, that way you'll never forget anything. 
         </p>
         <p>
             <form method="post" action="<?php echo Config::get('URL');?>note/create">

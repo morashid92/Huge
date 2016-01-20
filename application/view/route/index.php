@@ -1,35 +1,16 @@
 <!DOCTYPE html>
+<div class="container">
+        <div class="login-page-box">
+        <div class="table-wrapper">
+                <div class="login-box">
 <html>
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>Directions service</title>
-    <style>
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      #map {
-        height: 100%;
-      }
-#floating-panel {
-  position: absolute;
-  top: 10px;
-  left: 25%;
-  z-index: 5;
-  background-color: #fff;
-  padding: 5px;
-  border: 1px solid #999;
-  text-align: center;
-  font-family: 'Roboto','sans-serif';
-  line-height: 30px;
-  padding-left: 10px;
-}
 
-    </style>
-  </head>
   <body>
+    <h2>View Routes</h2>
     <div id="floating-panel">
     <b>Start: </b>
     <select id="start" onchange="calcRoute();">
@@ -63,6 +44,10 @@
     </select>
     </div>
     <div id="map"></div>
+              </div>
+        </div>
+    </div>
+  </div>
     <script>
 function initMap() {
   var directionsService = new google.maps.DirectionsService;

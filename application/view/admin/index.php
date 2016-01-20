@@ -1,3 +1,10 @@
+<div class="container">
+
+	    <div class="login-page-box">
+        <div class="table-wrapper">
+
+            <div class="login-box">
+                <h2>Login here</h2>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,3 +44,8 @@
 
 </div>	
 </body>
+            </div>
+
+        </div>
+    </div>
+</div>

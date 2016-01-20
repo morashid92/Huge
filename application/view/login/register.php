@@ -54,6 +54,7 @@
     </div>
 
     <div class="postcode-box">
+            <div class="login-box">
                 <h2>Billing Address</h2>
                 <div>
 
@@ -75,6 +76,7 @@
 
     </form>
     </div>
+</div>
             </div>
 
 

@@ -1,4 +1,18 @@
+<!DOCTYPE html>
 <div class="container">
+        <div class="login-page-box">
+        <div class="table-wrapper">
+                <div class="login-box">
+
+
+<html>
+<head>
+
+    
+   
+    
+</head>
+<body>
     <h1>NoteController/edit/:note_id</h1>
 
     <div class="box">
@@ -19,4 +33,6 @@
             <p>This note does not exist.</p>
         <?php } ?>
     </div>
+</div>
+</div>
 </div>

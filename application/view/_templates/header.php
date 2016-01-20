@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>HUGE</title>
+    <title>Swift Rails</title>
     <!-- META -->
     <meta charset="utf-8">
     <!-- send empty favicon fallback to prevent user's browser hitting the server for lots of favicon requests resulting in 404s -->
@@ -17,7 +17,6 @@
     <div class="wrapper">
 
         <!-- logo -->
-
         <!-- navigation -->
         <ul class="navigation">
             <li <?php if (View::checkForActiveController($filename, "index")) { echo ' class="active" '; } ?> >
@@ -51,7 +50,7 @@
 
             <?php } ?>
         </ul>
-
+        
         <!-- my account -->
         <ul class="navigation right">
         <?php if (Session::userIsLoggedIn()) : ?>
