@@ -10,26 +10,34 @@ else{
 
 ?>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+ <html>
+<head>
+    <title>search for train</title>
+    
+   
+    
+</head>
+<body>
+       
+
+
 <html>
 <head>
 <style type="text/css">
-	body{
-		background:url(images/NEW.jpg);
-		
-	}
+	
 	table{
-		margin:5px;
+		margin:15px;
 	}
 	th{
 		text-align:left;
 		font-family:Tahoma, Geneva, sans-serif;
-		font-size:18px;
-		color:#00F;
+		font-size:25px;
+		color:#008080;
 	}
 	td{
-		border:0px #0F0 groove;
-		padding-right:10px;
+		border:0px #008080 groove;
+		padding-right:50px;
 		text-align:left;
 	}
 	td.text{
@@ -39,21 +47,21 @@ else{
 	#details{
 		width:auto;
 		background:rgba(248,248,255,0.9);
-		border-radius:5px;
+		border-radius:20px;
 		/*box-shadow: 0 0 10px 5px #fff;*/
 		position:absolute;
-		top:20px;
-		left:250px;
+		top:100px;
+		left:300px;
 	}
 	#passenger{
-		position:relative;
+	
 		/*background:rgba(255,255,255,0);*/
-		border-radius:5px;
+		border-radius:50px;
 	}
 	td.red{
 		font-family:Tahoma, Geneva, sans-serif;
 		color:#F00;
-		font-size:16px;
+		font-size:25px;
 	}
 	a{
 		text-decoration:none;
@@ -68,13 +76,15 @@ else{
 	}
 	p.no{
 		font-family:font-family:Tahoma, Geneva, sans-serif;
-		font-size:18px;
+		font-size:30px;
 		color:teal;
 	}
-
 	
 </style>
+    
 </head>
+<body>
+
 <body>
 <div align="center"  id="details">
 <?php
@@ -195,6 +205,10 @@ else{
         </table>
     </form>
     </fieldset>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </body>

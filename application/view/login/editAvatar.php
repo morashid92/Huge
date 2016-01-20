@@ -1,4 +1,19 @@
+<!DOCTYPE html>
 <div class="container">
+        <div class="login-page-box">
+        <div class="table-wrapper">
+                <div class="login-box">
+
+
+<html>
+<head>
+
+    
+   
+    
+</head>
+<body>
+
     <h1>Edit your avatar</h1>
 
     <!-- echo out the system feedback (error and success messages) -->
@@ -8,8 +23,7 @@
         <h3>Upload an Avatar</h3>
 
         <div class="feedback info">
-            If you still see the old picture after uploading a new one: Hard-Reload the page with F5! Your browser doesn't
-            realize there's a new image as new and old one have the same filename.
+        If old Profile Photo is displayed please refresh the webpage!
         </div>
 
         <form action="<?php echo Config::get('URL'); ?>login/uploadAvatar_action" method="post" enctype="multipart/form-data">
@@ -25,4 +39,8 @@
         <h3>Delete your avatar</h3>
         <p>Click this link to delete your (local) avatar: <a href="<?php echo Config::get('URL'); ?>login/deleteAvatar_action">Delete your avatar</a>
     </div>
+</div>
+</div>
+</div>
+</div>
 </div>
