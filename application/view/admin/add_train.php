@@ -2,7 +2,46 @@
 <html>
 <head>
 <title>Train Addition Page</title>
-
+<style type="text/css">
+	body {
+		background-color: grey;
+		background-image:url('images/bg1.gif');
+	}
+	table {	
+			background-color:#F8F8FF;
+			padding-left:15px;
+			padding-right:15px;
+			padding-top:15px;
+			padding-bottom:15px;
+			width:60%;
+			border: 0px red solid;
+			font-family:Verdana, Geneva, sans-serif;
+			cellpadding:5px; 
+			cellspacing:5px;
+	}
+	td {
+		border-bottom: 1px green dotted;
+		height:30px;
+	}
+	span {
+		color:red;
+		font-size:8pt;
+	}
+	td.hr {
+		border-bottom: 1px blue solid;
+		font-size:15pt;
+		color:blue;
+		font-weight:bold;
+	}
+	td.nb {
+		border-bottom:0px green dotted;
+	}
+	td.last_hr {
+		border-bottom:1px blue solid;
+		border-bottom-left-radius:2em;
+		border-bottom-right-radius:2em;
+	}
+</style>
 
 <script type="text/javascript">
 function validateForm()
@@ -154,10 +193,8 @@ if (i=="0")
 
 		<select name="year">
 		<option value="" selected="selected">Year</option>
-		<option value="2016">2016</option>
-		<option value="2017">2017</option>
-		<option value="2018">2018</option>
-		<option value="2019">2019</option>
+		<option value="2011">2011</option>
+		<option value="2012">2012</option>
 		</select>
                 </td>
 	</tr>
@@ -172,32 +209,25 @@ if (i=="0")
 		<td><input type="text" name="arrive" size="30" maxlength="30"> HH:MM:SS</td>
 	</tr>
 	<tr>
-		<td>Select Ticket Type:</td>
-	</tr>
-		
-
-	<tr>
-		<td>Single</td>
-		
-		<td><input type="checkbox" name="chk1[]" value="50"></td>
-		<td><input name="single"  type="hidden"></td>
+		<td>General</td>
+		<td><input type="text" name="gen" size="30" maxlength="30"></td>
 	</tr>
 	<tr>
-		<td>Anytime Return</td>
-		<td><input type="checkbox" name="chk1[]" value="100" ></td>
-		<td><input  name="anytime_return"  type="hidden"></td>
+		<td>AC1</td>
+		<td><input type="text" name="ac1" size="30" maxlength="30"></td>
 	</tr>
-
-		<tr>
-		<td>Advanced</td>
-		<td><input type="checkbox" name="chk1[]" value="150" ></td>
-		<td><input name="advanced"  type="hidden"></td>
-		</tr>
-
-
-
-
-
+	<tr>
+		<td>AC2</td>
+		<td><input type="text" name="ac2" size="30" maxlength="30"></td>
+	</tr>
+	<tr>
+		<td>FC</td>
+		<td><input type="text" name="fc" size="30" maxlength="30"></td>
+	</tr>
+	<tr>
+		<td>SLP</td>
+		<td><input type="text" name="slp" size="30" maxlength="30"></td>
+	</tr>
 	<tr>
 		<td class="nb" colspan="2"><br /></td>
 	</tr>
@@ -206,7 +236,7 @@ if (i=="0")
 	</tr>
 	<tr>
 
-		<td colspan="2" class="last_hr" align="center"><input type="submit" name="Submit" value="Submit">&nbsp;&nbsp;&nbsp;&nbsp;
+		<td colspan="2" class="last_hr" align="center"><input type="submit" name="submit" value="Submit">&nbsp;&nbsp;&nbsp;&nbsp;
 		<input type="reset" name="clear" value="Reset"></td>
 
 	</tr>

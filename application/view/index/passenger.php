@@ -1,4 +1,3 @@
-
 <?php
 error_reporting(E_ALL ^ E_DEPRECATED);
 if($_SESSION['user_name'])
@@ -51,8 +50,8 @@ if(isset($_POST['name']))
 		die("error:" .mysql_error());
 		}else{
 			$test=$_POST['train_no'];
-			Redirect::to('index/booking');
-			}
+			Redirect::to('index/booking'); 
+		}
 		mysql_close($dbcon);
 		}	
 	}

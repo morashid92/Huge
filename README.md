@@ -6,7 +6,7 @@
 
 3. Import the whole database this time instead (delete your old one ) which can be downladed from: 
 
-https://drive.google.com/file/d/0BxX0dUsmMsrfVnFlNVViSVQ3bFU/view?usp=sharing
+https://drive.google.com/file/d/0BxX0dUsmMsrfOXlOd3FLMkxnRVE/view?usp=sharing
 
 4. Create a new fearure branch: git checkout -b "name of your branch"
 
